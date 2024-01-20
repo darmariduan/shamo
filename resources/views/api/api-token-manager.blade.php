@@ -104,11 +104,9 @@
                 {{ __('Please copy your new API token. For your security, it won\'t be shown again.') }}
             </div>
 
-            <x-jet-input x-ref="plaintextToken" type="text" readonly :value="$plainTextToken"
-                class="mt-4 bg-gray-100 px-4 py-2 rounded font-mono text-sm text-gray-500 w-full"
-                autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
-                @showing-token-modal.window="setTimeout(() => $refs.plaintextToken.select(), 250)"
-            />
+            <div class="mt-4 bg-gray-100 px-4 py-2 rounded font-mono text-sm text-gray-500">
+                {{ $plainTextToken }}
+            </div>
         </x-slot>
 
         <x-slot name="footer">

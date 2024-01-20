@@ -2,8 +2,8 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 
 class ProductCategoryRequest extends FormRequest
 {
@@ -25,7 +25,7 @@ class ProductCategoryRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required', 'max:255',
+            'name' => 'required|max:255'
         ];
     }
 }

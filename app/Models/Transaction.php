@@ -9,15 +9,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Transaction extends Model
 {
     use HasFactory, SoftDeletes;
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'users_id', 'address', 'payment', 'total_price', 'shipping_price', 'status',
-    ];
 
+    protected $fillable = [
+        'users_id', 'address', 'payment', 'total_price', 'shipping_price', 'status'
+    ];
+    
     public function user()
     {
         return $this->belongsTo(User::class, 'users_id', 'id');
